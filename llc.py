@@ -150,12 +150,15 @@ index=29
 #q: Modulus of elliptic curve(Curve secp256k1)
 q = 115792089237316195423570985008687907852837564279074904382605163141518161494337
 
+base_path = f"/workspace/IUTA/LE/data/data{index}"
 
-filename_k = "/workspace/IUTA/LE/data" + str(index) + "/k.txt"
-filename_s = "/workspace/IUTA/LE/data" + str(index) + "/s.txt"
-filename_r = "/workspace/IUTA/LE/data" + str(index) + "/r.txt"
-filename_hash = "/workspace/IUTA/LE/data" + str(index) + "/hash.txt"
-filename_pri = "/workspace/IUTA/LE/data" + str(index) + "/pri_key.txt"
+filename_k    = f"{base_path}/k.txt"
+filename_s    = f"{base_path}/s.txt"
+filename_r    = f"{base_path}/r.txt"
+filename_hash = f"{base_path}/hash.txt"
+filename_pri  = f"{base_path}/pri_key.txt"
+
+
 
 # k,hash,r,s: signature data, 1000 groups in total
 k = []
