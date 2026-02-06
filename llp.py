@@ -151,11 +151,11 @@ index=29
 q = 115792089237316195423570985008687907852837564279074904382605163141518161494337
 
 
-filename_k = "/home/jfoer/data/data" + str(index) + "/k.txt"
-filename_s = "/home/jfoer/data/data" + str(index) + "/s.txt"
-filename_r = "/home/jfoer/data/data" + str(index) + "/r.txt"
-filename_hash = "/home/jfoer/data/data" + str(index) + "/hash.txt"
-filename_pri = "/home/jfoer/data/data" + str(index) + "/pri_key.txt"
+filename_k = "/data" + str(index) + "/k.txt"
+filename_s = "/data" + str(index) + "/s.txt"
+filename_r = "/data" + str(index) + "/r.txt"
+filename_hash = "/data" + str(index) + "/hash.txt"
+filename_pri = "/data" + str(index) + "/pri_key.txt"
 
 # k,hash,r,s: signature data, 1000 groups in total
 k = []
