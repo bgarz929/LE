@@ -352,10 +352,17 @@ for cnt in range(0, num):
     for i in range(0, L):
         if (l_bkz[i][L - 1] == 2 ** (m - 1)):
             tmp_sum1 = 0
-            for index2 in range(0, len(mr_lam[0])):
-                tmpfrac = Fraction(2 ** mr_mu[0][index2], 2 ** m)
-                tmp_sum1 = tmp_sum1 + (2 ** (mr_lam[0][index2]) * t_s[0]) * (
-                            (-l_bkz[i][u - 1 + index2] + 2 ** (m - 1)) * tmpfrac)
+            for index2 in range(len(mr_lam[0])):
+                shift = mr_mu[0][index2] - m
+            
+                coef = -int(l_bkz[i][u - 1 + index2]) + (1 << (m - 1))
+            
+                tmp_sum1 += (
+                    (1 << mr_lam[0][index2]) *
+                    t_s[0] *
+                    coef *
+                    (1 << shift)
+                )
 
             alpha = ((tmp_sum1 + beta0) * r0inv) % q
 
@@ -364,10 +371,17 @@ for cnt in range(0, num):
                 break
         if (l_bkz[i][L - 1] == -2 ** (m - 1)):
             tmp_sum1 = 0
-            for index2 in range(0, len(mr_lam[0])):
-                tmpfrac = Fraction(2 ** mr_mu[0][index2], 2 ** m)
-                tmp_sum1 = tmp_sum1 + (2 ** (mr_lam[0][index2]) * t_s[0]) * (
-                            (l_bkz[i][u - 1 + index2] + 2 ** (m - 1)) * tmpfrac)
+            for index2 in range(len(mr_lam[0])):
+                shift = mr_mu[0][index2] - m
+            
+                coef = -int(l_bkz[i][u - 1 + index2]) + (1 << (m - 1))
+            
+                tmp_sum1 += (
+                    (1 << mr_lam[0][index2]) *
+                    t_s[0] *
+                    coef *
+                    (1 << shift)
+                )
             alpha = ((tmp_sum1 + beta0) * r0inv) % q
             if (alpha == pri_key):
                 flag = 1
