@@ -150,7 +150,7 @@ index=29
 #q: Modulus of elliptic curve(Curve secp256k1)
 q = 115792089237316195423570985008687907852837564279074904382605163141518161494337
 
-base_path = f"/workspace/IUTA/LE/data/data{index}"
+base_path = f"/content/LE/data/data{index}"
 
 filename_k    = f"{base_path}/k.txt"
 filename_s    = f"{base_path}/s.txt"
