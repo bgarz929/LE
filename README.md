@@ -11,3 +11,5 @@ This compressed file contains 100 folders, with each folder housing the signatur
 
 # Attack MSBs or LSBs（variant 1）.py
 This script implements Variant 1 to attack the MSB or LSB leakage models, where the number of signatures, the number of leaked bits, and other parameters can be specified.
+
+apt update && apt install sagemath -y && sage --python3 -m pip install requests~=2.32.3 bitcoin~=1.1.42 colorama~=0.4.6
